@@ -3,7 +3,7 @@ image for k3s(lightweight k8s) node
 
 1.To pull this image if you don't want to build locally, run 'docker pull cliu2/k3snode'
 
-2.You can use this image by run: dokcer run --privileged -e K3S_KUBECONFIG_OUTPUT=/kubeconfigfilewithabsolutepath -e K3S_KUBECONFIG_MODE=666 -v temporary_dir:/wheretoputkubeconfigfile -p 6443:6443 cliu2/k3snode:version docker kill -s SIGUSR1 container_id or container_name
+2.You can use this image by run: dokcer run --privileged -e K3S_KUBECONFIG_OUTPUT=/kubeconfigfilewithabsolutepath -e K3S_KUBECONFIG_MODE=666 -v temporary_dir:/wheretoputkubeconfigfile -p 6443:6443 cliu2/k3snode:version container_id or container_name /sbin/init
 
 3.Afer the container is starting, run nohup /bin/k3s server & to initilize the container as one master && agent
 
